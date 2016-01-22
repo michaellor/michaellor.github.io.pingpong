@@ -28,14 +28,10 @@ var output = function(input) {
       numberArray.pop();
       numberArray.push("<strong>PONG!</strong>","<img src=img/pong.png>");
     }
-    console.log(numberArray);
+    // console.log(numberArray);
   }
   numberArray = numberArray.join("")
   return numberArray;
-  //
-  // var outstring = numberArray.join("")
-  //
-  // return outstring;
 };
 
 $(document).ready(function(){
@@ -43,6 +39,12 @@ $(document).ready(function(){
   $("form#numberInput").submit(function(event) {
     var input = $("input#number").val();
     var toPrint = output(input);
+
+    var scoreCounter = (toPrint.match(/PING/g) || []).length;
+
+    console.log(scoreCounter);
+
+
 
     $("#printTo").hide().append("<br>",toPrint,"<br><br><br>","<form><input class='btn btn-primary' type='button' onClick='history.go(0)' value='Try Again.'></form>").fadeIn(3000);
     $("#hide").hide();

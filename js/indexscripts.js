@@ -44,7 +44,7 @@ $(document).ready(function(){
     var input = $("input#number").val();
     var toPrint = output(input);
 
-    $("#printTo").hide().append("<br>",toPrint,"<br>").fadeIn(3000);
+    $("#printTo").hide().append("<br>",toPrint,"<br><br><br>","<form><input class='btn btn-primary' type='button' onClick='history.go(0)' value='Try Again.'></form>").fadeIn(3000);
     $("#hide").hide();
 
     event.preventDefault();

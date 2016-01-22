@@ -44,11 +44,10 @@ var pingPongInput = function(number) {
 
 var inputArray = function(input) {
 
-  // var input = parseInt(input);
   var numberArray = [];
 
   for (var i = 1; i <= input; i++) {
     numberArray.push(i);
   }
   return numberArray;
-}
+};

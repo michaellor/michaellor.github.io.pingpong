@@ -8,9 +8,17 @@ var userInput = function(number) {
 
 }
 
-var pingNumber = function(number) {
-  if (number % 3 === 0) {
+var pingNumber = function(number1) {
+  if (number1 % 3 === 0) {
     return "ping";
+  } else {
+    return false;
+  }
+};
+
+var pongNumber = function(number2) {
+  if (number2 % 5 === 0) {
+    return "pong";
   } else {
     return false;
   }

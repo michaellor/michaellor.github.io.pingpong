@@ -9,3 +9,9 @@ describe('pingNumber', function() {
     expect(pingNumber(3)).to.equal("ping");
   });
 });
+
+describe('pongNumber', function() {
+  it("numbers divisible by 5 should be 'pong'.", function(){
+    expect(pongNumber(5)).to.equal("pong");
+  });
+});

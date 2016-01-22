@@ -2,6 +2,9 @@
 var output = function(input) {
 
 
+  if(input.match(/^[a-zA-Z]+$/)) {
+    return alert("Numbers only!");
+  }
 
   var numberArray = [];
 
@@ -13,17 +16,17 @@ var output = function(input) {
 
     if (i % 15 === 0) {
       numberArray.pop();
-      numberArray.push("<img src=img/ping.png>","<strong>pingpong!</strong>","<img src=img/pong.png>");
+      numberArray.push("<img src=img/ping.png>","<strong>PING-PONG!</strong>","<img src=img/pong.png>");
     }
 
     else if (i % 3 === 0) {
       numberArray.pop();
-      numberArray.push("<img src=img/ping.png>","<strong>ping!<strong>");
+      numberArray.push("<img src=img/ping.png>","<strong>PING!</strong>");
     }
 
     else if (i % 5 === 0) {
       numberArray.pop();
-      numberArray.push("<strong>pong!</strong>","<img src=img/pong.png>");
+      numberArray.push("<strong>PONG!</strong>","<img src=img/pong.png>");
     }
     console.log(numberArray);
   }
@@ -41,10 +44,12 @@ $(document).ready(function(){
     var input = $("input#number").val();
     var toPrint = output(input);
 
-    $("#printTo").append("<br><hr><strong>Here we go!!!</strong>",toPrint,"<hr>");
+    $("#printTo").hide().append("<br>",toPrint,"<br>").fadeIn(3000);
     $("#hide").hide();
 
-  event.preventDefault();
+    event.preventDefault();
   });
+
+
 
 });

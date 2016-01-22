@@ -7,19 +7,32 @@
     <title>Pingo Pongo</title>
   </head>
   <body>
-    <div class=container>
-    <h1>Enter a Number!</h1>
-      <div id=hide>
+    <div class="container">
+      <div class="page-header">
+        <h1 id="colorful">Enter a Number!</h1>
+      </div>
+      <div id="hide">
         <form id="numberInput">
         <div class="form-group">
           <label for="userInput"></label>
           <input type="text" name="input" id="number">
         </div>
-        <button type="submit" name="button">Let's Do It!</button>
-      </form>
+        <button class="btn btn-primary" type="submit" name="button">Let's Do It!</button>
+      </form><br>
       </div>
-      <div id=results>
-        <ul id="printTo"></p>
+      <div class="row">
+        <div class ="col-xs-4">
+          <p>Other stuff!</p>
+        </div>
+        <div class="col-xs-4">
+          <ul id="printTo"></ul>
+          <form><hr>
+            <input class="btn btn-primary" type="button" onClick="history.go(0)" value="Try Again.">
+          </form>
+        </div>
+        <div class ="col-xs-4">
+          <p>Other stuff!</p>
+        </div>
       </div>
     </div>
 

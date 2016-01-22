@@ -7,23 +7,23 @@ var output = function(input) {
 
 
   for (var i = 1; i <= input; i++) {
-    numberArray.push("<li>")
+    numberArray.push("<br>")
     numberArray.push(i);
 
 
     if (i % 15 === 0) {
       numberArray.pop();
-      numberArray.push("<img src=img/ping.png>","pingpong","<img src=img/pong.png>");
+      numberArray.push("<img src=img/ping.png>","<strong>pingpong!</strong>","<img src=img/pong.png>");
     }
 
     else if (i % 3 === 0) {
       numberArray.pop();
-      numberArray.push("<img src=img/ping.png>","ping");
+      numberArray.push("<img src=img/ping.png>","<strong>ping!<strong>");
     }
 
     else if (i % 5 === 0) {
       numberArray.pop();
-      numberArray.push("pong","<img src=img/pong.png>");
+      numberArray.push("<strong>pong!</strong>","<img src=img/pong.png>");
     }
     console.log(numberArray);
   }
@@ -41,7 +41,7 @@ $(document).ready(function(){
     var input = $("input#number").val();
     var toPrint = output(input);
 
-    $("#printTo").append("<br><hr>",toPrint,"<br><hr><strong>Good Luck!</strong>");
+    $("#printTo").append("<br><hr><strong>Here we go!!!</strong>",toPrint,"<hr>");
     $("#hide").hide();
 
   event.preventDefault();

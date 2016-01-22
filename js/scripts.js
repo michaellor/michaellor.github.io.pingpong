@@ -1,3 +1,9 @@
 var userInput = function(number) {
-  return false;
+  if (number === "a") {
+      return false;
+  } else {
+    return true;
+  }
+  console.log(number);
+
 }

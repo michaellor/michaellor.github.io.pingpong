@@ -15,3 +15,9 @@ describe('pongNumber', function() {
     expect(pongNumber(5)).to.equal("pong");
   });
 });
+
+describe('pingPongNumber', function() {
+  it("numbers divisible by 15 should be 'pong'.", function(){
+    expect(pingPongNumber(15)).to.equal("pingpong");
+  });
+});

@@ -23,3 +23,11 @@ var pongNumber = function(number2) {
     return false;
   }
 };
+
+var pingPongNumber = function(number3) {
+  if (number3 % 15 === 0) {
+    return "pingpong";
+  } else {
+    return false;
+  }
+};

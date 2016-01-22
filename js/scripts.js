@@ -7,3 +7,11 @@ var userInput = function(number) {
   console.log(number);
 
 }
+
+var pingNumber = function(number) {
+  if (number % 3 === 0) {
+    return "ping";
+  } else {
+    return false;
+  }
+};

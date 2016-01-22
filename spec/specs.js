@@ -27,3 +27,9 @@ describe('pingPongInput', function() {
     expect(pingPongInput(3)).to.equal("ping");
   });
 });
+
+describe('inputArray', function() {
+  it("input number should generate an array with a number range from 1 to the input number.", function(){
+    expect(inputArray(4)).to.equal("[1,2,3,4]");
+  });
+});

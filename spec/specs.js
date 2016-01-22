@@ -34,8 +34,14 @@ describe('inputArray', function() {
   });
 });
 
+describe('testArray', function() {
+  it("replace the number 3 with 'ping' in an array.", function(){
+    expect(testArray(5)).to.eql([1,2,'ping',4,5]);
+  });
+});
+
 describe('outputArray', function() {
   it("parse the inputArray for 3,5,and 15 and replace them with their respective 'ping' 'pong' 'pingpong' string values.", function(){
-    expect(inputArray([1,2,3,4,5])).to.eql([1,2,'ping',4,'pong']);
+    expect(inputArray([1,2,3,4,5])).to.equal([1,2,'ping',4,'pong']);
   });
 });
